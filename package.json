@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/patricklatorre/fourtowers.com#readme",
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "jquery": "^3.4.1",
     "tailwindcss": "^1.1.4"
-  }
+  },
+  "dependencies": {}
 }
