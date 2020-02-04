@@ -2,36 +2,136 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html, body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   @apply
   bg-white
+  w-full h-full
 }
 
-.navbar {
+
+/******************** HEADER ********************/
+nav.navbar > div {
   @apply
-  flex
+  fixed flex
   justify-between
-  bg-white
-  p-2
-  shadow-md
+  min-w-0 max-w-full w-full
+  z-50
+  px-10 py-4
+  bg-transparent
 }
 
-.hamburger {
+i.hamburger {
   @apply
   opacity-50
+  my-auto
 }
 
-.logo-colored {
+a.logo-colored {
   @apply
   m-auto
-  text-lg
-  text-center
+  text-lg text-center text-green-800
   font-bold
-  text-green-800
 }
-.logo-colored span {
+a.logo-colored span {
   @apply
   text-black
 }
 
+
+/******************** HERO SECTION ********************/
+
+#hero div.container {
+  height: 80vh;
+  min-width: 100%;
+  
+  @apply
+  relative
+  z-10
+  overflow-hidden
+}
+#hero div.container::before {
+  content: '';
+  opacity: 0.06;
+  background-image: url('../img/housebg.jpg');
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+
+  @apply
+  absolute block
+  top-0 right-0 z-0
+  w-full h-full
+  bg-cover bg-no-repeat
+}
+#hero div.container.hide-bg::before {
+  @apply
+  hidden
+}
+
+#hero div.hero-content {
+  @apply
+  relative
+  z-10
+  w-10/12
+  h-full
+  mx-10 my-32
+  align-middle
+}
+#hero div.hero-content > h2 {
+  @apply
+  uppercase
+  text-sm text-gray-700
+}
+#hero div.hero-content > p {
+  @apply
+  font-bold
+  text-3xl
+  leading-tight
+}
+
+#hero div.hero-navs {
+  @apply
+  mt-12
+}
+
+
+
+/******************** MEDIA QUERIES ********************/
+
+@screen md {
+  #hero div.container::before {
+    @apply 
+    hidden
+  }
+}
+
+
+/******************** COMPONENTS ********************/
+
+.btn-primary {
+  /* Prevent background color leak outs */
+  -webkit-background-clip: padding-box; 
+  -moz-background-clip:    padding; 
+  background-clip:padding-box;
+
+  @apply
+  p-3
+  text-sm
+  bg-green-500
+  text-gray-100
+  rounded-lg
+  border-2
+  border-gray-300
+  shadow-md
+}
+
+.btn-link {
+  @apply
+  p-3
+  text-sm
+  text-green-500
+  bg-transparent
+}
