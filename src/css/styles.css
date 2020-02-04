@@ -69,7 +69,7 @@ nav.navbar > div {
   min-w-0 max-w-full w-full
   z-50
   px-10 py-4
-  bg-transparent
+  bg-gray-100
 }
 
 i.hamburger {
@@ -93,7 +93,7 @@ a.logo-colored span {
 /******************** HERO SECTION ********************/
 
 #hero div.container {
-  height: 80vh;
+  height: 90vh;
   min-width: 100%;
   
   @apply
@@ -128,7 +128,7 @@ a.logo-colored span {
   z-10
   w-10/12
   h-full
-  mx-10 my-32
+  mx-10 my-48
   align-middle
 }
 #hero div.hero-content > h2 {
@@ -156,6 +156,64 @@ a.logo-colored span {
 }
 
 
+/******************** SERVICES SECTION ********************/
+
+section#services > div.container {
+  @apply
+  p-10
+}
+
+section#services div.header {
+  @apply
+  leading-snug
+  mb-10
+}
+
+section#services div.header > h1 {
+  @apply
+  font-bold
+  text-4xl
+}
+
+section#services div.header > h2 {
+  @apply
+  text-base
+  text-gray-600
+}
+
+section#services li {
+  @apply
+  mt-10
+}
+ 
+section#services li > * {
+  @apply
+  mb-2
+}
+
+section#services div.list-header {
+  @apply
+  flex
+  justify-start
+}
+
+section#services div.list-header > i {
+  @apply
+  mr-4
+}
+
+section#services div.list-header > h3 {
+  @apply
+  font-bold
+  text-lg
+}
+
+section#services li > p {
+  @apply
+  text-base
+  text-gray-700
+}
+
 /******************** MEDIA QUERIES ********************/
 
 @screen md {
@@ -163,32 +221,4 @@ a.logo-colored span {
     @apply 
     hidden
   }
-}
-
-
-/******************** COMPONENTS ********************/
-
-.btn-primary {
-  /* Prevent background color leak outs */
-  -webkit-background-clip: padding-box; 
-  -moz-background-clip:    padding; 
-  background-clip:padding-box;
-
-  @apply
-  p-3
-  text-sm
-  bg-green-500
-  text-gray-100
-  rounded-lg
-  border-2
-  border-gray-300
-  shadow-md
-}
-
-.btn-link {
-  @apply
-  p-3
-  text-sm
-  text-green-500
-  bg-transparent
 }
