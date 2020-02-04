@@ -145,9 +145,15 @@ a.logo-colored span {
 
 #hero div.hero-navs {
   @apply
+  flex
   mt-12
 }
 
+#hero div.hero-navs > a {
+  @apply
+  my-auto
+  mr-6
+}
 
 
 /******************** MEDIA QUERIES ********************/
