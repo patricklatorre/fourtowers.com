@@ -10,7 +10,58 @@ html, body {
 }
 
 
+/******************** FIXES ********************/
+i.fas {
+  @apply
+  my-auto
+}
+
+/******************** COMPONENTS ********************/
+
+.btn-primary {
+  /* Prevent background color leak outs */
+  -webkit-background-clip: padding-box; 
+  -moz-background-clip:    padding; 
+  background-clip:padding-box;
+
+  @apply
+  p-3
+  text-sm
+  bg-green-500
+  text-gray-100
+  rounded-lg
+  border-2
+  border-gray-300
+  shadow-md
+}
+.btn-primary:hover {
+  @apply
+  bg-green-600
+}
+.btn-primary:active {
+  @apply
+  bg-green-700
+}
+
+
+.btn-link {
+  @apply
+  text-sm
+  text-green-500
+  bg-transparent
+}
+.btn-link:hover {
+  @apply
+  text-green-600
+}
+.btn-link:active {
+  @apply
+  text-green-700
+}
+
+
 /******************** HEADER ********************/
+
 nav.navbar > div {
   @apply
   fixed flex
