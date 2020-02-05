@@ -141,9 +141,11 @@ a.logo-colored span {
   text-sm text-gray-700
 }
 #hero div.hero-content > p {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+
   @apply
   font-bold
-  text-3xl
+  text-4xl
   leading-tight
 }
 
