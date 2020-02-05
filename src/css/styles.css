@@ -185,7 +185,7 @@ section#services div.header > h1 {
 
 section#services div.header > h2 {
   @apply
-  text-base
+  text-lg
   text-gray-600
 }
 
