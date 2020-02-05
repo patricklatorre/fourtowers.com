@@ -208,6 +208,7 @@ section#services div.list-header {
 section#services div.list-header > i {
   @apply
   mr-4
+  opacity-50
 }
 
 section#services div.list-header > h3 {
