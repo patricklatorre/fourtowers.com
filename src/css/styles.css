@@ -159,6 +159,8 @@ a.logo-colored span {
 /******************** SERVICES SECTION ********************/
 
 section#services > div.container {
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 83.38%), #E6E9F3;
+  
   @apply
   p-10
 }
