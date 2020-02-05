@@ -16,6 +16,10 @@ i.fas {
   my-auto
 }
 
+p {
+  font-family: "Open Sans", 'Times New Roman', Times, serif;
+}
+
 /******************** COMPONENTS ********************/
 
 .btn-primary {
