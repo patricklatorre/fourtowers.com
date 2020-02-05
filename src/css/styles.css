@@ -220,7 +220,45 @@ section#services div.list-header > h3 {
 section#services li > p {
   @apply
   text-base
+  text-gray-800
+}
+
+
+/******************** ABOUT US SECTION ********************/
+
+section#about-us div.container {
+  @apply
+  p-10
+}
+
+section#about-us div.header {
+  @apply
+  leading-snug
+}
+
+section#about-us div.header > h2 {
+  @apply
+  text-gray-600
+  uppercase
+  text-sm
+}
+
+section#about-us div.header > h1 {
+  @apply
+  text-3xl text-left text-green-800
+  font-bold
+}
+section#about-us div.header > h1 span {
+  @apply
+  text-black
+}
+
+section#about-us > div.container > p {
+  @apply
+  mt-4
+  text-sm
   text-gray-700
+  leading-snug
 }
 
 /******************** MEDIA QUERIES ********************/
