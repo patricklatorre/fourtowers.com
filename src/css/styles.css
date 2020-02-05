@@ -224,6 +224,60 @@ section#about-us > div.container > p {
   text-justify
 }
 
+
+/******************** CONTACT US SECTION ********************/
+
+section#contact-us div.container {
+  height: 90vh;
+  min-width: 100%;
+  
+  @apply
+  relative
+  z-10
+  overflow-hidden
+}
+section#contact-us div.container::before {
+  content: '';
+  opacity: 0.1;
+  background-image: url('../img/keys.jpg');
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+
+  @apply
+  absolute block
+  top-0 left-0 z-0
+  w-full h-full
+  bg-cover bg-no-repeat
+}
+section#contact-us div.container.hide-bg::before {
+  @apply
+  hidden
+}
+
+
+section#contact-us div.container {
+  @apply
+  p-10
+  bg-green-800
+}
+
+section#contact-us div.header {
+  @apply
+  text-white
+  leading-snug
+  mb-10
+}
+
+section#contact-us div.header > h1 {
+  @apply
+  font-bold
+  text-4xl
+}
+
+
 /******************** COMPONENTS ********************/
 
 .btn-primary {
