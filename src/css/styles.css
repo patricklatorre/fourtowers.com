@@ -184,8 +184,13 @@ section#services li > p {
 /******************** ABOUT US SECTION ********************/
 
 section#about-us div.container {
+  background-color: #f3f4f8;
+  
   @apply
+  relative
+  z-20
   p-10
+  shadow-lg
 }
 
 section#about-us div.header {
