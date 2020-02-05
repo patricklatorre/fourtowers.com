@@ -106,9 +106,94 @@
         <h1>Get in touch today.</h1>
       </div>
 
+      <div class="flex-wrapper">
+        <div class="contact-text">
+          <h3>Business Hours</h3>
+          <p>Monday - Friday (9:00 AM to 6:00 PM)</p>
+          <p class="subtext">* Property viewing by appointment</p>
+          <h3>Email</h3>
+          <p>a.latorre@fourtowers.ph</p>
+          <h3>Call us</h3>
+          <ul>
+            <li>
+              <p>+63 928 521 8903</p>
+            </li>
+            <li>
+              <p>+63 915 057 9709</p>
+            </li>
+            <li>
+              <p>+632 7729 2872</p>
+            </li>
+          </ul>
+        </div>
 
+        <div class="leave-message">
+          <div class="header">
+            <h1>Or leave us a message</h1>
+          </div>
+          <form id="message-form" action="#" method="post">
+            <div class="name-fields">
+              <div>
+                <label for="firstname">First name</label>
+                <input type="text" name="firstname" id="firstname" value="" tabindex="1">
+              </div>
+
+              <div>
+                <label for="lastname">Last name</label>
+                <input type="text" name="lastname" id="lastname" value="" tabindex="1">
+              </div>
+            </div>
+
+            <div>
+              <label for="email">Email Address</label>
+              <input type="email" name="email" id="email" value="" tabindex="1">
+            </div>
+
+            <div>
+              <label for="mobile">Phone number</label>
+              <input type="tel" name="mobile" id="mobile" value="" tabindex="1">
+            </div>
+
+            <div>
+              <label for="textarea">Message</label>
+              <textarea rows="8" name="messageContent" id="messageContent"
+                placeholder="Let us know your concerns and we'll gladly reach out"></textarea>
+            </div>
+
+            <div>
+              <input class="btn-primary" type="submit" value="Send">
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
+
+  <footer>
+    <div class="container">
+      <div class="logo-copyright">
+        <a href="#" class="logo-colored">four<span>TOWERS</span></a>
+      </div>
+      <div class="divider"></div>
+      <nav>
+        <h2>Explore</h2>
+        <div>
+          <a href="#hero" class="btn-link-white contact-cta">Home</a>
+          <a href="#services" class="btn-link-white contact-cta">Services</a>
+          <a href="#about-us" class="btn-link-white contact-cta">About Us</a>
+          <a href="#contact-us" class="btn-link-white contact-cta">Contact Us</a>
+        </div>
+      </nav>
+      <div class="divider hidden sm:block"></div>
+      <div class="contact-text hidden sm:block">
+        <h2>Contact us</h2>
+        <p>a.latorre@fourtowers.ph</p>
+        <p>+63 928 521 8903</p>
+        <p>+63 915 057 9709</p>
+        <p>+632 7729 2872</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="./js/main.js"></script>
 </body>
