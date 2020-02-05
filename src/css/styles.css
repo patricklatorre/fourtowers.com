@@ -221,6 +221,7 @@ section#about-us > div.container > p {
   text-sm
   text-gray-700
   leading-snug
+  text-justify
 }
 
 /******************** COMPONENTS ********************/
