@@ -20,6 +20,80 @@ p {
   font-family: "Open Sans", 'Times New Roman', Times, serif;
 }
 
+div.container {
+  @apply
+  min-w-full
+}
+
+div.flex-wrapper {
+  @apply
+  flex
+  flex-col
+  flex-1
+}
+
+
+/******************** COMPONENTS ********************/
+
+.btn-primary {
+  /* Prevent background color leak outs */
+  -webkit-background-clip: padding-box; 
+  -moz-background-clip:    padding; 
+  background-clip:padding-box;
+
+  @apply
+  p-3
+  text-sm
+  bg-green-500
+  text-gray-100
+  rounded-lg
+  border-2
+  border-gray-300
+  shadow-md
+}
+.btn-primary:hover {
+  @apply
+  bg-green-600
+}
+.btn-primary:active {
+  @apply
+  bg-green-700
+}
+
+
+.btn-link {
+  @apply
+  w-auto
+  text-sm
+  text-green-500
+  bg-transparent
+}
+.btn-link:hover {
+  @apply
+  text-green-600
+}
+.btn-link:active {
+  @apply
+  text-green-700
+}
+
+
+.btn-link-white {
+  @apply
+  w-auto
+  text-sm
+  text-white
+  bg-transparent
+}
+.btn-link:hover {
+  @apply
+  text-green-600
+}
+.btn-link:active {
+  @apply
+  text-green-700
+}
+
 
 /******************** NAVBAR ********************/
 
@@ -55,7 +129,6 @@ a.logo-colored span {
 
 #hero div.container {
   height: 90vh;
-  min-width: 100%;
   
   @apply
   relative
@@ -228,7 +301,7 @@ section#about-us > div.container > p {
 /******************** CONTACT US SECTION ********************/
 
 section#contact-us div.container {
-  height: 90vh;
+  height: 80rem;
   min-width: 100%;
   
   @apply
@@ -260,7 +333,7 @@ section#contact-us div.container.hide-bg::before {
 
 section#contact-us div.container {
   @apply
-  p-10
+  py-10
   bg-green-800
 }
 
@@ -271,63 +344,187 @@ section#contact-us div.header {
   mb-10
 }
 
-section#contact-us div.header > h1 {
+section#contact-us div.contact-text {
   @apply
-  font-bold
-  text-4xl
+  mx-10
 }
 
 
-/******************** COMPONENTS ********************/
+section#contact-us div.container > div.header > h1 {
+  @apply
+  font-bold
+  text-3xl
+  leading-tight
+  text-center
+}
 
-.btn-primary {
-  /* Prevent background color leak outs */
-  -webkit-background-clip: padding-box; 
-  -moz-background-clip:    padding; 
-  background-clip:padding-box;
+section#contact-us div.contact-text h3 {
+  font-family: "Open Sans";
 
   @apply
-  p-3
+  font-bold
+  text-lg
+  text-white
+  mt-5
+}
+
+section#contact-us div.contact-text p {
+  @apply
   text-sm
-  bg-green-500
-  text-gray-100
+  text-white
+  opacity-75
+}
+
+section#contact-us div.contact-text p.subtext {
+  @apply
+  ml-5
+  text-xs
+  text-left
+  opacity-50
+}
+
+section#contact-us div.leave-message {
+  @apply
+  relative
+  z-20
+  mt-8
+  mx-5
+  px-10 py-10
+  rounded-lg
+  bg-gray-200
+}
+
+section#contact-us form > div,
+section#contact-us form > div.name-fields > div {
+  @apply
+  w-full
+  mb-4
+  bg-gray-200
+}
+
+section#contact-us form label {
+  @apply
+  block
+  w-full
+  text-sm
+  text-gray-700
+}
+
+section#contact-us div.leave-message > div.header {
+  @apply
+  font-bold
+  text-gray-800
+  text-xl
+  text-left
+  mb-5
+}
+
+section#contact-us form input[type=text],
+section#contact-us form input[type=email],
+section#contact-us form input[type=tel],
+section#contact-us form textarea {
+  @apply
+  block
+  w-full
+  mt-1
+  bg-white
   rounded-lg
   border-2
   border-gray-300
-  shadow-md
+  p-2
+  outline-none
 }
-.btn-primary:hover {
+
+section#contact-us form input:focus,
+section#contact-us form textarea:focus {
   @apply
-  bg-green-600
+  border-green-300
 }
-.btn-primary:active {
+
+section#contact-us form input[type=submit] {
   @apply
-  bg-green-700
+  w-full
+  mt-2
 }
 
 
-.btn-link {
+/******************** FOOTER SECTION ********************/
+
+footer {
   @apply
+  bg-green-800
+}
+
+footer div.divider {
+  @apply
+  border-l-2 
+  border-gray-900
+}
+
+footer > div.container {
+  background-color: #0f131a;
+  
+  @apply
+  flex flex-row
+  justify-around
+  px-10 py-16
+}
+
+footer div.logo-copyright > a {
+  @apply
+  text-gray-200
+  text-xl
+}
+footer div.logo-copyright span {
+  @apply
+  text-gray-200
+  text-xl
+}
+
+footer nav > div {
+  @apply
+  flex flex-col
+}
+
+footer nav > h2,
+footer div.contact-text > h2 {
+  @apply
+  uppercase
+  font-bold
+  text-gray-300
+  mb-2
+}
+
+footer a.contact-cta,
+footer div.contact-text > p {
+  @apply
+  opacity-75
+  text-white
   text-sm
-  text-green-500
-  bg-transparent
-}
-.btn-link:hover {
-  @apply
-  text-green-600
-}
-.btn-link:active {
-  @apply
-  text-green-700
 }
 
 
 /******************** MEDIA QUERIES ********************/
 
 @screen md {
+  div.flex-wrapper {
+    @apply
+    flex-row
+  }
+
   #hero div.container::before {
     @apply 
     hidden
   }
-}
 
+  section#contact-us div.container {
+    height: 64rem;
+  }
+
+  footer > div.container { 
+    @apply
+    flex flex-row
+    justify-around
+    px-10 py-16
+  }
+}
