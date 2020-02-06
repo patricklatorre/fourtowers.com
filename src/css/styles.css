@@ -3,636 +3,675 @@
 @tailwind utilities;
 
 html, body {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  @apply
-  bg-white
-  w-full h-full
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    @apply
+    bg-white
+    w-full h-full
 }
 
 
 /******************** FIXES ********************/
 i.fas {
-  @apply
-  my-auto
+    @apply
+    my-auto
 }
 
 p {
-  font-family: "Open Sans", 'Times New Roman', Times, serif;
+    font-family: "Open Sans", 'Times New Roman', Times, serif;
 }
 
 div.container {
-  @apply
-  min-w-full
+    @apply
+    min-w-full
 }
 
 div.flex-wrapper {
-  @apply
-  flex
-  flex-col
-  flex-1
+    @apply
+    flex
+    flex-col
+    flex-1
 }
 
 
 /******************** COMPONENTS ********************/
 
 .btn-primary {
-  /* Prevent background color leak outs */
-  -webkit-background-clip: padding-box; 
-  -moz-background-clip:    padding; 
-  background-clip:padding-box;
-
-  @apply
-  p-3
-  text-sm
-  bg-green-500
-  text-gray-100
-  rounded-lg
-  border-2
-  border-gray-300
-  shadow-md
+    /* Prevent background color leak outs */
+    -webkit-background-clip: padding-box; 
+    -moz-background-clip:    padding; 
+    background-clip:padding-box;
+    
+    @apply
+    p-3
+    text-sm
+    bg-green-500
+    text-gray-100
+    rounded-lg
+    border-2
+    border-gray-300
+    shadow-md
 }
 .btn-primary:hover {
-  @apply
-  bg-green-600
+    @apply
+    bg-green-600
 }
 .btn-primary:active {
-  @apply
-  bg-green-700
+    @apply
+    bg-green-700
 }
 
 
 .btn-primary-outline {
-  /* Prevent background color leak outs */
-  -webkit-background-clip: padding-box; 
-  -moz-background-clip:    padding; 
-  background-clip:padding-box;
-
-  @apply
-  p-3
-  text-sm
-  text-gray-100
-  rounded-lg
-  border-2
-  border-gray-300
-  shadow-md
+    /* Prevent background color leak outs */
+    -webkit-background-clip: padding-box; 
+    -moz-background-clip:    padding; 
+    background-clip:padding-box;
+    
+    @apply
+    p-3
+    text-sm
+    text-gray-100
+    rounded-lg
+    border-2
+    border-gray-300
+    shadow-md
 }
 .btn-primary:hover {
-  @apply
-  bg-green-600
+    @apply
+    bg-green-600
 }
 .btn-primary:active {
-  @apply
-  bg-green-700
+    @apply
+    bg-green-700
 }
 
 
 .btn-link {
-  @apply
-  w-auto
-  text-sm
-  text-green-500
-  bg-transparent
+    @apply
+    w-auto
+    text-sm
+    text-green-500
+    bg-transparent
 }
 .btn-link:hover {
-  @apply
-  text-green-600
+    @apply
+    text-green-600
 }
 .btn-link:active {
-  @apply
-  text-green-700
+    @apply
+    text-green-700
 }
 
 
 .btn-link-white {
-  @apply
-  w-auto
-  text-sm
-  text-white
-  bg-transparent
+    @apply
+    w-auto
+    text-sm
+    text-white
+    bg-transparent
 }
 .btn-link-white:hover {
-  @apply
-  text-green-600
+    @apply
+    text-green-600
 }
 .btn-link-white:active {
-  @apply
-  text-green-700
+    @apply
+    text-green-700
 }
 
 
 .btn-link-dark {
-  @apply
-  w-auto
-  text-sm
-  text-gray-700
-  bg-transparent
+    @apply
+    w-auto
+    text-sm
+    text-gray-700
+    bg-transparent
 }
 .btn-link-dark:hover {
-  @apply
-  text-green-600
+    @apply
+    text-green-600
 }
 .btn-link-dark:active {
-  @apply
-  text-green-700
+    @apply
+    text-green-700
 }
 
 
 /******************** NAVBAR ********************/
 
 nav.navbar > div {
-  @apply
-  fixed flex
-  justify-between
-  min-w-0 max-w-full w-full
-  z-50
-  px-10 py-4
-  bg-gray-100
+    @apply
+    fixed flex
+    justify-between
+    min-w-0 max-w-full w-full
+    z-50
+    px-10 py-4
+    bg-gray-100
 }
 
 i.hamburger {
-  @apply
-  opacity-50
-  my-auto
+    @apply
+    opacity-50
+    my-auto
 }
 
 a.logo-colored {
-  @apply
-  m-auto
-  text-lg text-center text-green-800
-  font-bold
+    @apply
+    m-auto
+    text-lg text-center text-green-800
+    font-bold
 }
 a.logo-colored span {
-  @apply
-  text-black
+    @apply
+    text-black
 }
 
 nav.navbar ul {
-  @apply
-  hidden
+    @apply
+    hidden
 }
 
 nav.navbar li {
-  @apply
-  font-bold
-  text-xl
-  inline
-  ml-6
+    @apply
+    font-bold
+    text-xl
+    inline
+    ml-6
 }
 
 
 /******************** HERO SECTION ********************/
 
 #hero div.container {
-  height: 90vh;
-  
-  @apply
-  relative
-  z-10
-  overflow-hidden
+    /* height: 90vh; */
+    height: auto;
+    
+    @apply
+    relative
+    z-10
+    overflow-hidden
 }
 #hero div.container::before {
-  content: '';
-  opacity: 0.06;
-  background-image: url('../img/housebg.jpg');
-  background-position: 50% 0;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-
-  @apply
-  absolute block
-  top-0 right-0 z-0
-  w-full h-full
-  bg-cover bg-no-repeat
+    content: '';
+    opacity: 0.12;
+    background-image: url('../img/housebg.jpg');
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    
+    @apply
+    absolute block
+    top-0 right-0 z-0
+    w-full h-full
+    bg-cover bg-no-repeat
 }
 #hero div.container.hide-bg::before {
-  @apply
-  hidden
+    @apply
+    hidden
 }
 
 #hero div.hero-content {
-  @apply
-  relative
-  z-10
-  w-10/12
-  h-full
-  mx-10 my-48
-  align-middle
+    @apply
+    relative
+    z-10
+    w-10/12
+    h-full
+    mx-10 my-48
+    align-middle
 }
 #hero div.hero-content > h2 {
-  @apply
-  uppercase
-  text-sm text-gray-700
+    @apply
+    uppercase
+    text-sm text-gray-700
 }
 #hero div.hero-content > p {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-
-  @apply
-  font-bold
-  text-4xl
-  leading-tight
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    
+    @apply
+    font-bold
+    text-4xl
+    leading-tight
 }
 
 #hero div.hero-navs {
-  @apply
-  flex
-  mt-12
+    @apply
+    flex
+    mt-12
 }
 
 #hero div.hero-navs > a {
-  @apply
-  my-auto
-  mr-6
+    @apply
+    my-auto
+    mr-6
+}
+
+#hero div.img-wrapper {
+    @apply
+    hidden
 }
 
 
 /******************** SERVICES SECTION ********************/
 
 section#services > div.container {
-  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 83.38%), #E6E9F3;
-  
-  @apply
-  p-10
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 83.38%), #E6E9F3;
+    
+    @apply
+    p-10
 }
 
 section#services div.header {
-  @apply
-  leading-snug
-  mb-10
+    @apply
+    leading-snug
+    mb-10
 }
 
 section#services div.header > h1 {
-  @apply
-  font-bold
-  text-4xl
+    @apply
+    font-bold
+    text-4xl
 }
 
 section#services div.header > h2 {
-  @apply
-  text-lg
-  text-gray-600
+    @apply
+    text-lg
+    text-gray-600
 }
 
 section#services li {
-  @apply
-  mt-10
+    @apply
+    mt-10
 }
- 
+
 section#services li > * {
-  @apply
-  mb-2
+    @apply
+    mb-2
 }
 
 section#services div.list-header {
-  @apply
-  flex
-  justify-start
+    @apply
+    flex
+    justify-start
 }
 
 section#services div.list-header > i {
-  @apply
-  mr-4
-  opacity-50
+    @apply
+    mr-4
+    opacity-50
 }
 
 section#services div.list-header > h3 {
-  @apply
-  font-bold
-  text-lg
+    @apply
+    font-bold
+    text-lg
 }
 
 section#services li > p {
-  @apply
-  text-base
-  text-gray-800
+    @apply
+    text-base
+    text-gray-800
 }
 
 
 /******************** ABOUT US SECTION ********************/
 
 section#about-us div.container {
-  background-color: #f3f4f8;
-  
-  @apply
-  relative
-  z-20
-  p-10
-  shadow-lg
+    background-color: #f3f4f8;
+    
+    @apply
+    relative
+    z-20
+    p-10
+    shadow-lg
 }
 
 section#about-us div.header {
-  @apply
-  leading-snug
+    @apply
+    leading-snug
 }
 
 section#about-us div.header > h2 {
-  @apply
-  text-gray-600
-  uppercase
-  text-sm
+    @apply
+    text-gray-600
+    uppercase
+    text-sm
 }
 
 section#about-us div.header > h1 {
-  @apply
-  text-3xl text-left text-green-800
-  font-bold
+    @apply
+    text-3xl text-left text-green-800
+    font-bold
 }
 section#about-us div.header > h1 span {
-  @apply
-  text-black
+    @apply
+    text-black
 }
 
 section#about-us > div.container > p {
-  @apply
-  mt-4
-  text-sm
-  text-gray-700
-  leading-snug
-  text-justify
+    @apply
+    mt-4
+    text-sm
+    text-gray-700
+    leading-snug
+    text-justify
 }
 
 
 /******************** CONTACT US SECTION ********************/
 
 section#contact-us div.container {
-  height: 80rem;
-  min-width: 100%;
-  
-  @apply
-  relative
-  z-10
-  overflow-hidden
+    height: 80rem;
+    min-width: 100%;
+    
+    @apply
+    relative
+    z-10
+    overflow-hidden
 }
 section#contact-us div.container::before {
-  content: '';
-  opacity: 0.1;
-  background-image: url('../img/keys.jpg');
-  background-position: 50% 0;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-
-  @apply
-  absolute block
-  top-0 left-0 z-0
-  w-full h-full
-  bg-cover bg-no-repeat
+    content: '';
+    opacity: 0.1;
+    background-image: url('../img/keys.jpg');
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    
+    @apply
+    absolute block
+    top-0 left-0 z-0
+    w-full h-full
+    bg-cover bg-no-repeat
 }
 section#contact-us div.container.hide-bg::before {
-  @apply
-  hidden
+    @apply
+    hidden
 }
 
 
 section#contact-us div.container {
-  @apply
-  py-10
-  bg-green-800
+    @apply
+    py-10
+    bg-green-800
 }
 
 section#contact-us div.header {
-  @apply
-  text-white
-  leading-snug
-  mb-10
+    @apply
+    text-white
+    leading-snug
+    mb-10
 }
 
 section#contact-us div.contact-text {
-  @apply
-  mx-10
+    @apply
+    mx-10
 }
 
 
 section#contact-us div.container > div.header > h1 {
-  @apply
-  font-bold
-  text-3xl
-  leading-tight
-  text-center
+    @apply
+    font-bold
+    text-3xl
+    leading-tight
+    text-center
 }
 
 section#contact-us div.contact-text h3 {
-  font-family: "Open Sans";
-
-  @apply
-  font-bold
-  text-lg
-  text-white
-  mt-5
+    font-family: "Open Sans";
+    
+    @apply
+    font-bold
+    text-lg
+    text-white
+    mt-5
 }
 
 section#contact-us div.contact-text p {
-  @apply
-  text-sm
-  text-white
-  opacity-75
+    @apply
+    text-sm
+    text-white
+    opacity-75
 }
 
 section#contact-us div.contact-text p.subtext {
-  @apply
-  ml-5
-  text-xs
-  text-left
-  opacity-50
+    @apply
+    ml-5
+    text-xs
+    text-left
+    opacity-50
 }
 
 section#contact-us div.leave-message {
-  @apply
-  relative
-  z-20
-  mt-8
-  mx-5
-  px-10 py-10
-  rounded-lg
-  bg-gray-200
+    @apply
+    relative
+    z-20
+    mt-8
+    mx-5
+    px-10 py-10
+    rounded-lg
+    bg-gray-200
 }
 
 section#contact-us form > div,
 section#contact-us form > div.name-fields > div {
-  @apply
-  w-full
-  mb-4
-  bg-gray-200
+    @apply
+    w-full
+    mb-4
+    bg-gray-200
 }
 
 section#contact-us form label {
-  @apply
-  block
-  w-full
-  text-sm
-  text-gray-700
+    @apply
+    block
+    w-full
+    text-sm
+    text-gray-700
 }
 
 section#contact-us div.leave-message > div.header {
-  @apply
-  font-bold
-  text-gray-800
-  text-xl
-  text-left
-  mb-5
+    @apply
+    font-bold
+    text-gray-800
+    text-xl
+    text-left
+    mb-5
 }
 
 section#contact-us form input[type=text],
 section#contact-us form input[type=email],
 section#contact-us form input[type=tel],
 section#contact-us form textarea {
-  @apply
-  block
-  w-full
-  mt-1
-  bg-white
-  rounded-lg
-  border-2
-  border-gray-300
-  p-2
-  outline-none
+    @apply
+    block
+    w-full
+    mt-1
+    bg-white
+    rounded-lg
+    border-2
+    border-gray-300
+    p-2
+    outline-none
 }
 
 section#contact-us form input:focus,
 section#contact-us form textarea:focus {
-  @apply
-  border-green-300
+    @apply
+    border-green-300
 }
 
 section#contact-us form input[type=submit] {
-  @apply
-  w-full
-  mt-2
+    @apply
+    w-full
+    mt-2
 }
 
 
 /******************** FOOTER SECTION ********************/
 
 footer {
-  @apply
-  bg-green-800
+    @apply
+    bg-green-800
 }
 
 footer div.divider {
-  @apply
-  border-l-2 
-  border-gray-900
+    @apply
+    border-l-2 
+    border-gray-900
 }
 
 footer div.container {
-  background-color: #0f131a;
-  @apply
-  flex flex-col
-  px-10 py-16
+    background-color: #0f131a;
+    @apply
+    flex flex-col
+    px-10 py-16
 }
 
 footer div.container > div.footer-content {  
-  @apply
-  flex flex-row
-  justify-around
+    @apply
+    flex flex-row
+    justify-around
 }
 
 footer div.logo-copyright {
-  @apply
-  flex flex-col
+    @apply
+    flex flex-col
 }
 
 footer div.logo-copyright > a.logo-colored {
-  @apply
-  m-0 p-0
-  mb-4
-  text-left
-  text-gray-200
-  text-xl
+    @apply
+    m-0 p-0
+    mb-4
+    text-left
+    text-gray-200
+    text-xl
 }
 footer div.logo-copyright span {
-  @apply
-  text-gray-200
-  text-xl
+    @apply
+    text-gray-200
+    text-xl
 }
 
 footer nav > div {
-  @apply
-  flex flex-col
+    @apply
+    flex flex-col
 }
 
 footer nav > h2,
 footer div.contact-text > h2 {
-  @apply
-  uppercase
-  font-bold
-  text-gray-300
-  mb-2
+    @apply
+    uppercase
+    font-bold
+    text-gray-300
+    mb-2
 }
 
 footer a.contact-cta,
 footer div.contact-text > p {
-  @apply
-  opacity-75
-  text-white
-  text-sm
+    @apply
+    opacity-75
+    text-white
+    text-sm
 }
 
 footer small#copyright {  
-  @apply
-  text-white
-  text-center
-  w-full
-  pt-12
-  opacity-50
+    @apply
+    text-white
+    text-center
+    w-full
+    pt-12
+    opacity-50
 }
 
 /******************** MEDIA QUERIES ********************/
-
 @screen lg {
-  div.flex-wrapper {
-    @apply
-    flex-row
-  }
-  
-  /******************** NAVBAR ********************/
-  nav.navbar > div.container {
-    @apply
-    px-24
-  }
+    div.flex-wrapper {
+        @apply
+        flex-row
+    }
+    
+    /******************** NAVBAR ********************/
+    nav.navbar > div.container {
+        @apply
+        px-24
+        shadow-md
+    }
+    
+    nav.navbar a.logo-colored {
+        @apply
+        mx-0
+        text-left
+        text-xl
+    }
+    
+    nav.navbar ul {
+        @apply
+        inline-block
+    }
+    
+    nav.navbar i.fa-bars,
+    nav.navbar div.whitespace {
+        @apply
+        hidden
+    }
+    
+    /******************** HERO ********************/
+    #hero div.container {
+        @apply
+        h-auto
+    }
+    
+    #hero div.container::before {
+        @apply
+        hidden
+    }
+    
+    #hero div.hero-content {
+        @apply
+        pl-24
+        mx-0
+        my-auto
+    }
 
-  nav.navbar a.logo-colored {
-    @apply
-    mx-0
-    text-left
-    text-xl
-  }
+    #hero div.hero-content > h2 {
+        @apply
+        text-base
+    }
+    #hero div.hero-content > p {
+        @apply
+        text-4xl
+    }
 
-  nav.navbar ul {
-    @apply
-    inline-block
-  }
+    #hero div.hero-navs > a.contact-cta {
+        @apply
+        text-lg
+    }
 
-  nav.navbar i.fa-bars,
-  nav.navbar div.whitespace {
-    @apply
-    hidden
-  }
-
-  /******************** HERO ********************/
-  #hero div.container::before {
-    @apply 
-    hidden
-  }
-  
-  /******************** SERVICES ********************/
-  
-  
-  /******************** ABOUT US ********************/
-  
-  
-  /******************** CONTACT US ********************/
-  section#contact-us div.container {
-    height: 64rem;
-  }
-  
-  /******************** CONTACT US ********************/
-  footer div.container > div.footer-content { 
-    @apply
-    flex flex-row
-    justify-around
-  }
+    #hero div.img-wrapper {
+        @apply
+        block
+        w-full
+        mt-12
+    }
+    
+    /******************** SERVICES ********************/
+    
+    
+    /******************** ABOUT US ********************/
+    
+    
+    /******************** CONTACT US ********************/
+    section#contact-us div.container {
+        height: 64rem;
+    }
+    
+    /******************** CONTACT US ********************/
+    footer div.container > div.footer-content { 
+        @apply
+        flex flex-row
+        justify-around
+    }
     
 }
