@@ -110,11 +110,28 @@ div.flex-wrapper {
   text-white
   bg-transparent
 }
-.btn-link:hover {
+.btn-link-white:hover {
   @apply
   text-green-600
 }
-.btn-link:active {
+.btn-link-white:active {
+  @apply
+  text-green-700
+}
+
+
+.btn-link-dark {
+  @apply
+  w-auto
+  text-sm
+  text-gray-700
+  bg-transparent
+}
+.btn-link-dark:hover {
+  @apply
+  text-green-600
+}
+.btn-link-dark:active {
   @apply
   text-green-700
 }
@@ -147,6 +164,19 @@ a.logo-colored {
 a.logo-colored span {
   @apply
   text-black
+}
+
+nav.navbar ul {
+  @apply
+  hidden
+}
+
+nav.navbar li {
+  @apply
+  font-bold
+  text-xl
+  inline
+  ml-6
 }
 
 
@@ -551,24 +581,58 @@ footer small#copyright {
 
 /******************** MEDIA QUERIES ********************/
 
-@screen md {
+@screen lg {
   div.flex-wrapper {
     @apply
     flex-row
   }
+  
+  /******************** NAVBAR ********************/
+  nav.navbar > div.container {
+    @apply
+    px-24
+  }
 
+  nav.navbar a.logo-colored {
+    @apply
+    mx-0
+    text-left
+    text-xl
+  }
+
+  nav.navbar ul {
+    @apply
+    inline-block
+  }
+
+  nav.navbar i.fa-bars,
+  nav.navbar div.whitespace {
+    @apply
+    hidden
+  }
+
+  /******************** HERO ********************/
   #hero div.container::before {
     @apply 
     hidden
   }
-
+  
+  /******************** SERVICES ********************/
+  
+  
+  /******************** ABOUT US ********************/
+  
+  
+  /******************** CONTACT US ********************/
   section#contact-us div.container {
     height: 64rem;
   }
-
+  
+  /******************** CONTACT US ********************/
   footer div.container > div.footer-content { 
     @apply
     flex flex-row
     justify-around
   }
+    
 }
