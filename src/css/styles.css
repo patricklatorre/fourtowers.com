@@ -61,6 +61,31 @@ div.flex-wrapper {
 }
 
 
+.btn-primary-outline {
+  /* Prevent background color leak outs */
+  -webkit-background-clip: padding-box; 
+  -moz-background-clip:    padding; 
+  background-clip:padding-box;
+
+  @apply
+  p-3
+  text-sm
+  text-gray-100
+  rounded-lg
+  border-2
+  border-gray-300
+  shadow-md
+}
+.btn-primary:hover {
+  @apply
+  bg-green-600
+}
+.btn-primary:active {
+  @apply
+  bg-green-700
+}
+
+
 .btn-link {
   @apply
   w-auto
