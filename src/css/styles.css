@@ -486,17 +486,29 @@ footer div.divider {
   border-gray-900
 }
 
-footer > div.container {
+footer div.container {
   background-color: #0f131a;
-  
   @apply
-  flex flex-row
-  justify-around
+  flex flex-col
   px-10 py-16
 }
 
-footer div.logo-copyright > a {
+footer div.container > div.footer-content {  
   @apply
+  flex flex-row
+  justify-around
+}
+
+footer div.logo-copyright {
+  @apply
+  flex flex-col
+}
+
+footer div.logo-copyright > a.logo-colored {
+  @apply
+  m-0 p-0
+  mb-4
+  text-left
   text-gray-200
   text-xl
 }
@@ -528,6 +540,14 @@ footer div.contact-text > p {
   text-sm
 }
 
+footer small#copyright {  
+  @apply
+  text-white
+  text-center
+  w-full
+  pt-12
+  opacity-50
+}
 
 /******************** MEDIA QUERIES ********************/
 
@@ -546,10 +566,9 @@ footer div.contact-text > p {
     height: 64rem;
   }
 
-  footer > div.container { 
+  footer div.container > div.footer-content { 
     @apply
     flex flex-row
     justify-around
-    px-10 py-16
   }
 }
