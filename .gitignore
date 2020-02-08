@@ -1,4 +1,5 @@
 client/public
+client/src/js/config.js
 
 # Logs
 logs
