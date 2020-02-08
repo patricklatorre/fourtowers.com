@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npm run build",
     "dev:ui": "parcel client/src/index.html",
-    "build": "parcel build client/src/index.html --out-dir client/public/ --public-url ./",
+    "build": "parcel build client/src/index.html --out-dir client/public/ --public-url ./ --no-source-maps",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
