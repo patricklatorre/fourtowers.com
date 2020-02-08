@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html --out-dir public/ --public-url ./",
+    "dev": "npm run build",
+    "dev:ui": "parcel client/src/index.html",
+    "build": "parcel build client/src/index.html --out-dir client/public/ --public-url ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
