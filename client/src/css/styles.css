@@ -811,6 +811,11 @@ footer small#copyright {
         mr-6
     }
 
+    section#contact-us form input[type=submit] {
+        @apply
+        text-lg
+    }
+
     /******************** FOOTER ********************/
     footer div.container > div.footer-content { 
         @apply
