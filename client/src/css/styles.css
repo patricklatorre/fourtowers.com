@@ -642,10 +642,13 @@ footer small#copyright {
     #home div.hero-content > h2 {
         @apply
         text-base
+        mb-4
     }
     #home div.hero-content > p {
         @apply
-        text-5xl
+        text-6xl
+        text-gray-900
+        leading-none
     }
 
     #home div.hero-navs > a.contact-cta {
