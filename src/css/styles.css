@@ -635,6 +635,7 @@ footer small#copyright {
         pl-24
         mx-0
         my-auto
+        mr-16
     }
 
     #hero div.hero-content > h2 {
@@ -643,7 +644,7 @@ footer small#copyright {
     }
     #hero div.hero-content > p {
         @apply
-        text-4xl
+        text-5xl
     }
 
     #hero div.hero-navs > a.contact-cta {
