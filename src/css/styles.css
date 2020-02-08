@@ -588,7 +588,8 @@ footer small#copyright {
 }
 
 /******************** MEDIA QUERIES ********************/
-@screen lg {
+
+@screen xl {
     div.flex-wrapper {
         @apply
         flex-row
