@@ -657,21 +657,70 @@ footer small#copyright {
     }
     
     /******************** SERVICES ********************/
+    section#services div.container {
+        @apply
+        py-24
+        mx-0
+        px-0
+    }
+
+    section#services div.header {
+        @apply
+        w-full
+        mx-auto
+        text-center
+    }
+
+    section#services div.header > h1 {
+        @apply
+        mb-2
+    }
+
+    section#services div.flex-wrapper {
+        @apply
+        mt-20
+        justify-between
+    }
+
+    section#services div.flex-wrapper > div.img-wrapper {
+        @apply
+        block
+        h-auto
+        w-8/12
+    }
+
+    section#services div.details {
+        @apply
+        pl-16
+        pr-24
+    }
     
+    section#services li {
+        @apply
+        mt-0 mb-8
+
+    }
     
     /******************** ABOUT US ********************/
-    
+    section#about-us div.container {
+        @apply
+        px-24 py-24
+    }
+
+    section#about-us div.header > h2 {
+        @apply
+        hidden
+    }
     
     /******************** CONTACT US ********************/
     section#contact-us div.container {
         height: 64rem;
     }
     
-    /******************** CONTACT US ********************/
+    /******************** FOOTER ********************/
     footer div.container > div.footer-content { 
         @apply
         flex flex-row
         justify-around
     }
-    
 }
