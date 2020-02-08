@@ -758,9 +758,58 @@ footer small#copyright {
 
     /******************** CONTACT US ********************/
     section#contact-us div.container {
-        height: 64rem;
+        height: 72rem;
+        @apply
+        p-24
+    }
+
+    section#contact-us div.contact-text {
+        @apply
+        mt-12
+    }
+
+    section#contact-us div.container > div.flex-wrapper {
+        @apply
+        justify-around
+    }
+
+    section#contact-us div.container > div.header > h1 {
+        @apply
+        text-6xl
+    }
+
+    section#contact-us div.contact-text > h3 {
+        @apply
+        mt-10
+        text-2xl
+    }
+
+    section#contact-us div.contact-text p {
+        @apply
+        text-lg
     }
     
+    section#contact-us div.contact-text p.subtext {
+        @apply
+        text-sm
+    }
+
+    section#contact-us div.leave-message {
+        @apply
+        w-5/12
+    }
+
+    section#contact-us div.leave-message div.name-fields {
+        @apply
+        justify-between
+        mb-0
+    }
+
+    section#contact-us div.leave-message div.name-fields > div:first-child {
+        @apply
+        mr-6
+    }
+
     /******************** FOOTER ********************/
     footer div.container > div.footer-content { 
         @apply
