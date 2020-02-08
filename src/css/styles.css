@@ -703,11 +703,18 @@ footer small#copyright {
         pl-16
         pr-24
     }
-    
+
+    section#services div.details li h3,
+    section#services div.details li i,
+    section#services div.details li p,
+    section#services div.details li a {
+        @apply
+        text-xl
+    }
+
     section#services li {
         @apply
-        mt-0 mb-8
-
+        mt-0 mb-12
     }
     
     /******************** ABOUT US ********************/
