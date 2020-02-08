@@ -349,7 +349,7 @@ section#about-us div.header > h1 span {
     text-black
 }
 
-section#about-us > div.container > p {
+section#about-us div.about-us-content > p {
     @apply
     mt-4
     text-sm
