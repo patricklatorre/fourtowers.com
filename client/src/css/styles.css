@@ -589,7 +589,7 @@ footer small#copyright {
 
 /******************** MEDIA QUERIES ********************/
 
-@screen xl {
+@screen lg {
     div.flex-wrapper {
         @apply
         flex-row
@@ -646,7 +646,7 @@ footer small#copyright {
     }
     #home div.hero-content > p {
         @apply
-        text-6xl
+        text-5xl
         text-gray-900
         leading-none
     }
@@ -681,7 +681,7 @@ footer small#copyright {
     section#services div.header > h1 {
         @apply
         mb-2
-        text-6xl
+        text-5xl
     }
 
     section#services div.header > h2 {
@@ -699,7 +699,7 @@ footer small#copyright {
         @apply
         block
         h-auto
-        w-8/12
+        w-full
     }
 
     section#services div.details {
@@ -713,7 +713,7 @@ footer small#copyright {
     section#services div.details li p,
     section#services div.details li a {
         @apply
-        text-xl
+        text-lg
     }
 
     section#services li {
@@ -724,19 +724,19 @@ footer small#copyright {
     /******************** ABOUT US ********************/
     section#about-us div.container {
         @apply
-        px-24 py-24
+        px-24 py-20
     }
 
     section#about-us div.header {
         @apply
-        w-full
+        w-5/12
         self-start
         my-auto
         mr-6
     }
 
     section#about-us div.header > h1 {
-        font-size: 5rem;
+        font-size: 3rem;
 
         @apply
         text-center
@@ -750,13 +750,13 @@ footer small#copyright {
     section#about-us div.about-us-content {
         @apply
         self-end
-        w-full
+        w-7/12
     }
     
     section#about-us div.about-us-content > p {
         @apply
         leading-normal
-        text-lg
+        text-sm
         text-justify
     }
 
@@ -824,5 +824,56 @@ footer small#copyright {
         @apply
         flex flex-row
         justify-around
+    }
+}
+
+
+@screen xl {
+    #home div.hero-content > p {
+        @apply
+        text-6xl
+    }
+
+    section#services div.flex-wrapper > div.img-wrapper {
+        @apply
+        w-8/12
+    }
+
+    section#services div.header > h1 {
+        @apply
+        text-6xl
+    }
+
+    section#services div.details li h3,
+    section#services div.details li i,
+    section#services div.details li p,
+    section#services div.details li a {
+        @apply
+        text-xl
+    }
+
+    section#about-us div.header {
+        @apply
+        w-full
+        self-start
+        my-auto
+        mr-6
+    }
+
+    section#about-us div.header > h1 {
+        font-size: 4rem;
+
+        @apply
+        text-center
+    }
+
+    section#about-us div.about-us-content {
+        @apply
+        w-full
+    }
+    
+    section#about-us div.about-us-content > p {
+        @apply
+        text-base
     }
 }
