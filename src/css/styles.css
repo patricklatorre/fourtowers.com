@@ -184,7 +184,7 @@ nav.navbar li {
 
 /******************** HERO SECTION ********************/
 
-#hero div.container {
+#home div.container {
     /* height: 90vh; */
     height: auto;
     
@@ -193,7 +193,7 @@ nav.navbar li {
     z-10
     overflow-hidden
 }
-#hero div.container::before {
+#home div.container::before {
     content: '';
     opacity: 0.12;
     background-image: url('../img/housebg.jpg');
@@ -209,12 +209,12 @@ nav.navbar li {
     w-full h-full
     bg-cover bg-no-repeat
 }
-#hero div.container.hide-bg::before {
+#home div.container.hide-bg::before {
     @apply
     hidden
 }
 
-#hero div.hero-content {
+#home div.hero-content {
     @apply
     relative
     z-10
@@ -223,12 +223,12 @@ nav.navbar li {
     mx-10 my-48
     align-middle
 }
-#hero div.hero-content > h2 {
+#home div.hero-content > h2 {
     @apply
     uppercase
     text-sm text-gray-700
 }
-#hero div.hero-content > p {
+#home div.hero-content > p {
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     
     @apply
@@ -237,19 +237,19 @@ nav.navbar li {
     leading-tight
 }
 
-#hero div.hero-navs {
+#home div.hero-navs {
     @apply
     flex
     mt-12
 }
 
-#hero div.hero-navs > a {
+#home div.hero-navs > a {
     @apply
     my-auto
     mr-6
 }
 
-#hero div.img-wrapper {
+#home div.img-wrapper {
     @apply
     hidden
 }
@@ -620,17 +620,17 @@ footer small#copyright {
     }
     
     /******************** HERO ********************/
-    #hero div.container {
+    #home div.container {
         @apply
         h-auto
     }
     
-    #hero div.container::before {
+    #home div.container::before {
         @apply
         hidden
     }
     
-    #hero div.hero-content {
+    #home div.hero-content {
         @apply
         pl-24
         mx-0
@@ -638,21 +638,21 @@ footer small#copyright {
         mr-16
     }
 
-    #hero div.hero-content > h2 {
+    #home div.hero-content > h2 {
         @apply
         text-base
     }
-    #hero div.hero-content > p {
+    #home div.hero-content > p {
         @apply
         text-5xl
     }
 
-    #hero div.hero-navs > a.contact-cta {
+    #home div.hero-navs > a.contact-cta {
         @apply
         text-lg
     }
 
-    #hero div.img-wrapper {
+    #home div.img-wrapper {
         @apply
         block
         w-full
