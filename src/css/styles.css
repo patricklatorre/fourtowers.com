@@ -723,11 +723,39 @@ footer small#copyright {
         px-24 py-24
     }
 
+    section#about-us div.header {
+        @apply
+        w-full
+        self-start
+        my-auto
+        mr-6
+    }
+
+    section#about-us div.header > h1 {
+        font-size: 5rem;
+
+        @apply
+        text-center
+    }
+
     section#about-us div.header > h2 {
         @apply
         hidden
     }
+
+    section#about-us div.about-us-content {
+        @apply
+        self-end
+        w-full
+    }
     
+    section#about-us div.about-us-content > p {
+        @apply
+        leading-normal
+        text-lg
+        text-justify
+    }
+
     /******************** CONTACT US ********************/
     section#contact-us div.container {
         height: 64rem;
