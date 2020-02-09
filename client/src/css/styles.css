@@ -493,7 +493,7 @@ section#contact-us div.contact-text h3 {
 
 section#contact-us div.contact-text p {
     @apply
-    text-sm
+    text-base
     text-white
     opacity-75
 }
@@ -501,7 +501,7 @@ section#contact-us div.contact-text p {
 section#contact-us div.contact-text p.subtext {
     @apply
     ml-5
-    text-xs
+    text-sm
     text-left
     opacity-50
 }
@@ -568,6 +568,11 @@ section#contact-us form input[type=submit] {
     @apply
     w-full
     mt-2
+}
+
+section#contact-us form div.name-fields {
+    @apply
+    mb-0
 }
 
 
