@@ -638,7 +638,7 @@ footer small#copyright {
         my-auto
         mr-16
     }
-
+    
     #home div.hero-content > h2 {
         @apply
         text-base
@@ -650,12 +650,12 @@ footer small#copyright {
         text-gray-900
         leading-none
     }
-
+    
     #home div.hero-navs > a.contact-cta {
         @apply
         text-lg
     }
-
+    
     #home div.img-wrapper {
         @apply
         block
@@ -670,44 +670,44 @@ footer small#copyright {
         mx-0
         px-0
     }
-
+    
     section#services div.header {
         @apply
         w-full
         mx-auto
         text-center
     }
-
+    
     section#services div.header > h1 {
         @apply
         mb-2
         text-5xl
     }
-
+    
     section#services div.header > h2 {
         @apply
         text-2xl
     }
-
+    
     section#services div.flex-wrapper {
         @apply
         mt-20
         justify-between
     }
-
+    
     section#services div.flex-wrapper > div.img-wrapper {
         @apply
         block
         h-auto
         w-full
     }
-
+    
     section#services div.details {
         @apply
         pl-16
         pr-24
     }
-
+    
     section#services div.details li h3,
     section#services div.details li i,
     section#services div.details li p,
@@ -715,7 +715,7 @@ footer small#copyright {
         @apply
         text-lg
     }
-
+    
     section#services li {
         @apply
         mt-0 mb-12
@@ -726,7 +726,7 @@ footer small#copyright {
         @apply
         px-24 py-20
     }
-
+    
     section#about-us div.header {
         @apply
         w-5/12
@@ -734,19 +734,19 @@ footer small#copyright {
         my-auto
         mr-6
     }
-
+    
     section#about-us div.header > h1 {
         font-size: 3rem;
-
+        
         @apply
         text-center
     }
-
+    
     section#about-us div.header > h2 {
         @apply
         hidden
     }
-
+    
     section#about-us div.about-us-content {
         @apply
         self-end
@@ -759,35 +759,35 @@ footer small#copyright {
         text-sm
         text-justify
     }
-
+    
     /******************** CONTACT US ********************/
     section#contact-us div.container {
         height: 72rem;
         @apply
         p-24
     }
-
+    
     section#contact-us div.contact-text {
         @apply
         mt-12
     }
-
+    
     section#contact-us div.container > div.flex-wrapper {
         @apply
         justify-around
     }
-
+    
     section#contact-us div.container > div.header > h1 {
         @apply
         text-6xl
     }
-
+    
     section#contact-us div.contact-text > h3 {
         @apply
         mt-10
         text-2xl
     }
-
+    
     section#contact-us div.contact-text p {
         @apply
         text-lg
@@ -797,28 +797,28 @@ footer small#copyright {
         @apply
         text-sm
     }
-
+    
     section#contact-us div.leave-message {
         @apply
         w-5/12
     }
-
+    
     section#contact-us div.leave-message div.name-fields {
         @apply
         justify-between
         mb-0
     }
-
+    
     section#contact-us div.leave-message div.name-fields > div:first-child {
         @apply
         mr-6
     }
-
+    
     section#contact-us form input[type=submit] {
         @apply
         text-lg
     }
-
+    
     /******************** FOOTER ********************/
     footer div.container > div.footer-content { 
         @apply
@@ -833,17 +833,17 @@ footer small#copyright {
         @apply
         text-6xl
     }
-
+    
     section#services div.flex-wrapper > div.img-wrapper {
         @apply
         w-8/12
     }
-
+    
     section#services div.header > h1 {
         @apply
         text-6xl
     }
-
+    
     section#services div.details li h3,
     section#services div.details li i,
     section#services div.details li p,
@@ -851,7 +851,7 @@ footer small#copyright {
         @apply
         text-xl
     }
-
+    
     section#about-us div.header {
         @apply
         w-full
@@ -859,14 +859,14 @@ footer small#copyright {
         my-auto
         mr-6
     }
-
+    
     section#about-us div.header > h1 {
         font-size: 4rem;
-
+        
         @apply
         text-center
     }
-
+    
     section#about-us div.about-us-content {
         @apply
         w-full
@@ -876,4 +876,53 @@ footer small#copyright {
         @apply
         text-base
     }
+}
+
+
+div.sidenav {
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    z-index: 100;
+    overflow-x: hidden;
+    
+    @apply 
+    fixed
+    h-full
+    w-full
+    top-0
+    left-0
+    bg-gray-200
+    overflow-x-hidden
+    pt-20
+    shadow-xl
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+    @apply
+    text-gray-700
+    overflow-x-hidden
+    whitespace-no-wrap
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .sidenav-close {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+
+    @apply
+    text-gray-700
+    text-2xl
 }
