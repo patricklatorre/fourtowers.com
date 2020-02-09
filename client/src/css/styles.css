@@ -139,6 +139,49 @@ div.flex-wrapper {
 }
 
 
+div.sidenav {
+    transition: 0.4s;
+    z-index: 100;
+    overflow-x: hidden;
+
+    @apply 
+    fixed
+    w-0 h-full
+    top-0 left-0
+    bg-gray-200
+    overflow-x-hidden
+    pt-20
+}
+
+div.sidenav a {
+    padding: 1rem 1rem 1rem 2rem;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+    @apply
+    text-gray-700
+    overflow-x-hidden
+    whitespace-no-wrap
+}
+
+div.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+div.sidenav i.sidenav-close {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+
+    @apply
+    text-gray-700
+    text-2xl
+}
+
+
 /******************** NAVBAR ********************/
 
 nav.navbar > div {
@@ -876,53 +919,4 @@ footer small#copyright {
         @apply
         text-base
     }
-}
-
-
-div.sidenav {
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    z-index: 100;
-    overflow-x: hidden;
-    
-    @apply 
-    fixed
-    h-full
-    w-full
-    top-0
-    left-0
-    bg-gray-200
-    overflow-x-hidden
-    pt-20
-    shadow-xl
-}
-
-/* The navigation menu links */
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-
-    @apply
-    text-gray-700
-    overflow-x-hidden
-    whitespace-no-wrap
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .sidenav-close {
-    position: absolute;
-    top: 1rem;
-    left: 2rem;
-
-    @apply
-    text-gray-700
-    text-2xl
 }
