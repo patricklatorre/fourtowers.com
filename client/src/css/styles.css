@@ -36,6 +36,21 @@ div.flex-wrapper {
 
 
 /******************** COMPONENTS ********************/
+noscript {
+    top: 3.8rem;
+    z-index: 45;
+    @apply
+    absolute
+    block
+    py-2
+    border-2
+    border-red-600
+    text-white
+    bg-red-600
+    w-full
+    text-center
+}
+
 
 .btn-primary {
     /* Prevent background color leak outs */
