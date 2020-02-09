@@ -10,5 +10,12 @@ document.getElementById('message-form').addEventListener('submit', function (eve
     config.emailjs.service,
     config.emailjs.template,
     this
-  )
+  ).then((response) => {
+    if (response.status === 200) {
+      alert('Your message has been sent! Thank you for contacting us.')
+      document.getElementById('message-form').reset()
+    } else {
+      alert("Your message can't be sent right now. You can send us an email or text instead.")
+    }
+  })
 })
