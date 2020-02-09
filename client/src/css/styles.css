@@ -332,6 +332,7 @@ section#services div.header > h1 {
     @apply
     font-bold
     text-4xl
+    text-gray-900
 }
 
 section#services div.header > h2 {
@@ -366,6 +367,7 @@ section#services div.list-header > h3 {
     @apply
     font-bold
     text-lg
+    text-gray-900
 }
 
 section#services li > p {
@@ -406,7 +408,7 @@ section#about-us div.header > h1 {
 }
 section#about-us div.header > h1 span {
     @apply
-    text-black
+    text-gray-900
 }
 
 section#about-us div.about-us-content > p {
