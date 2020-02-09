@@ -1,0 +1,32 @@
+{
+  "name": "fourtowers.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run build",
+    "dev:ui": "parcel client/src/index.html",
+    "build": "parcel build client/src/index.html --out-dir client/public/ --public-url ./ --no-source-maps",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patricklatorre/fourtowers.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patricklatorre/fourtowers.com/issues"
+  },
+  "homepage": "https://github.com/patricklatorre/fourtowers.com#readme",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.0.6",
+    "cssnano": "^4.1.10",
+    "tailwindcss": "^1.1.4"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "emailjs-com": "^2.4.1"
+  }
+}

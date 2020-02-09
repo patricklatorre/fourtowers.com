@@ -1,0 +1,944 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    @apply
+    bg-white
+    w-full h-full
+    m-0 p-0
+    overflow-x-hidden
+}
+
+
+/******************** FIXES ********************/
+i.fas {
+    @apply
+    my-auto
+}
+
+p {
+    font-family: "Open Sans", 'Times New Roman', Times, serif;
+}
+
+div.container {
+    @apply
+    min-w-full
+}
+
+div.flex-wrapper {
+    @apply
+    flex
+    flex-col
+    flex-1
+}
+
+
+/******************** COMPONENTS ********************/
+noscript {
+    top: 3.8rem;
+    z-index: 45;
+    @apply
+    absolute
+    block
+    py-2
+    border-2
+    border-red-600
+    text-white
+    bg-red-600
+    w-full
+    text-center
+}
+
+
+.btn-primary {
+    /* Prevent background color leak outs */
+    -webkit-background-clip: padding-box; 
+    -moz-background-clip:    padding; 
+    background-clip:padding-box;
+    
+    @apply
+    p-3
+    text-sm
+    bg-green-500
+    text-gray-100
+    rounded-lg
+    border-2
+    border-gray-300
+    shadow-md
+}
+.btn-primary:hover {
+    @apply
+    bg-green-600
+}
+.btn-primary:active {
+    @apply
+    bg-green-700
+}
+
+
+.btn-primary-outline {
+    /* Prevent background color leak outs */
+    -webkit-background-clip: padding-box; 
+    -moz-background-clip:    padding; 
+    background-clip:padding-box;
+    
+    @apply
+    p-3
+    text-sm
+    text-gray-100
+    rounded-lg
+    border-2
+    border-gray-300
+    shadow-md
+}
+.btn-primary:hover {
+    @apply
+    bg-green-600
+}
+.btn-primary:active {
+    @apply
+    bg-green-700
+}
+
+
+.btn-link {
+    @apply
+    w-auto
+    text-sm
+    text-green-500
+    bg-transparent
+}
+.btn-link:hover {
+    @apply
+    text-green-600
+}
+.btn-link:active {
+    @apply
+    text-green-700
+}
+
+
+.btn-link-white {
+    @apply
+    w-auto
+    text-sm
+    text-white
+    bg-transparent
+}
+.btn-link-white:hover {
+    @apply
+    text-green-600
+}
+.btn-link-white:active {
+    @apply
+    text-green-700
+}
+
+
+.btn-link-dark {
+    @apply
+    w-auto
+    text-sm
+    text-gray-700
+    bg-transparent
+}
+.btn-link-dark:hover {
+    @apply
+    text-green-600
+}
+.btn-link-dark:active {
+    @apply
+    text-green-700
+}
+
+
+div.sidenav {
+    transition: 0.4s;
+    z-index: 100;
+    overflow-x: hidden;
+
+    @apply 
+    fixed
+    w-0 h-full
+    top-0 left-0
+    bg-gray-200
+    overflow-x-hidden
+    pt-20
+}
+
+div.sidenav a {
+    padding: 1rem 1rem 1rem 2rem;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+    @apply
+    text-gray-700
+    overflow-x-hidden
+    whitespace-no-wrap
+}
+
+div.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+div.sidenav i.sidenav-close {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+
+    @apply
+    text-gray-700
+    text-2xl
+}
+
+
+/******************** NAVBAR ********************/
+
+nav.navbar > div {
+    @apply
+    fixed flex
+    justify-between
+    min-w-0 max-w-full w-full
+    z-50
+    px-10 py-4
+    bg-gray-100
+}
+
+i.hamburger {
+    @apply
+    opacity-50
+    my-auto
+}
+
+a.logo-colored {
+    @apply
+    m-auto
+    text-lg text-center text-green-800
+    font-bold
+}
+a.logo-colored span {
+    @apply
+    text-black
+}
+
+nav.navbar ul {
+    @apply
+    hidden
+}
+
+nav.navbar li {
+    @apply
+    font-bold
+    text-xl
+    inline
+    ml-6
+}
+
+
+/******************** HERO SECTION ********************/
+
+#home div.container {
+    /* height: 90vh; */
+    height: auto;
+    
+    @apply
+    relative
+    z-10
+    overflow-hidden
+}
+#home div.container::before {
+    content: '';
+    opacity: 0.12;
+    background-image: url('../img/housebg.jpg');
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    
+    @apply
+    absolute block
+    top-0 right-0 z-0
+    w-full h-full
+    bg-cover bg-no-repeat
+}
+#home div.container.hide-bg::before {
+    @apply
+    hidden
+}
+
+#home div.hero-content {
+    @apply
+    relative
+    z-10
+    w-10/12
+    h-full
+    mx-10 my-48
+    align-middle
+}
+#home div.hero-content > h2 {
+    @apply
+    uppercase
+    text-sm text-gray-700
+}
+#home div.hero-content > p {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    
+    @apply
+    font-bold
+    text-4xl
+    leading-tight
+}
+
+#home div.hero-navs {
+    @apply
+    flex
+    mt-12
+}
+
+#home div.hero-navs > a {
+    @apply
+    my-auto
+    mr-6
+}
+
+#home div.img-wrapper {
+    @apply
+    hidden
+}
+
+
+/******************** SERVICES SECTION ********************/
+
+section#services > div.container {
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 83.38%), #E6E9F3;
+    
+    @apply
+    p-10
+}
+
+section#services div.header {
+    @apply
+    leading-snug
+    mb-10
+}
+
+section#services div.header > h1 {
+    @apply
+    font-bold
+    text-4xl
+    text-gray-900
+}
+
+section#services div.header > h2 {
+    @apply
+    text-lg
+    text-gray-600
+}
+
+section#services li {
+    @apply
+    mt-10
+}
+
+section#services li > * {
+    @apply
+    mb-2
+}
+
+section#services div.list-header {
+    @apply
+    flex
+    justify-start
+}
+
+section#services div.list-header > i {
+    @apply
+    mr-4
+    opacity-50
+}
+
+section#services div.list-header > h3 {
+    @apply
+    font-bold
+    text-lg
+    text-gray-900
+}
+
+section#services li > p {
+    @apply
+    text-base
+    text-gray-800
+}
+
+
+/******************** ABOUT US SECTION ********************/
+
+section#about-us div.container {
+    background-color: #f3f4f8;
+    
+    @apply
+    relative
+    z-20
+    p-10
+    shadow-lg
+}
+
+section#about-us div.header {
+    @apply
+    leading-snug
+}
+
+section#about-us div.header > h2 {
+    @apply
+    text-gray-600
+    uppercase
+    text-sm
+}
+
+section#about-us div.header > h1 {
+    @apply
+    text-3xl text-left text-green-800
+    font-bold
+}
+section#about-us div.header > h1 span {
+    @apply
+    text-gray-900
+}
+
+section#about-us div.about-us-content > p {
+    @apply
+    mt-4
+    text-sm
+    text-gray-700
+    leading-snug
+    text-justify
+}
+
+
+/******************** CONTACT US SECTION ********************/
+
+section#contact-us div.container {
+    height: 80rem;
+    min-width: 100%;
+    
+    @apply
+    relative
+    z-10
+    overflow-hidden
+}
+section#contact-us div.container::before {
+    content: '';
+    opacity: 0.1;
+    background-image: url('../img/keys.jpg');
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    
+    @apply
+    absolute block
+    top-0 left-0 z-0
+    w-full h-full
+    bg-cover bg-no-repeat
+}
+section#contact-us div.container.hide-bg::before {
+    @apply
+    hidden
+}
+
+
+section#contact-us div.container {
+    @apply
+    py-10
+    bg-green-800
+}
+
+section#contact-us div.header {
+    @apply
+    text-white
+    leading-snug
+    mb-10
+}
+
+section#contact-us div.contact-text {
+    @apply
+    mx-10
+}
+
+
+section#contact-us div.container > div.header > h1 {
+    @apply
+    font-bold
+    text-3xl
+    leading-tight
+    text-center
+}
+
+section#contact-us div.contact-text h3 {
+    font-family: "Open Sans";
+    
+    @apply
+    font-bold
+    text-lg
+    text-white
+    mt-5
+}
+
+section#contact-us div.contact-text p {
+    @apply
+    text-base
+    text-white
+    opacity-75
+}
+
+section#contact-us div.contact-text p.subtext {
+    @apply
+    ml-5
+    text-sm
+    text-left
+    opacity-50
+}
+
+section#contact-us div.leave-message {
+    @apply
+    relative
+    z-20
+    mt-8
+    mx-5
+    px-10 py-10
+    rounded-lg
+    bg-gray-200
+}
+
+section#contact-us form > div,
+section#contact-us form > div.name-fields > div {
+    @apply
+    w-full
+    mb-4
+    bg-gray-200
+}
+
+section#contact-us form label {
+    @apply
+    block
+    w-full
+    text-sm
+    text-gray-700
+}
+
+section#contact-us div.leave-message > div.header {
+    @apply
+    font-bold
+    text-gray-800
+    text-xl
+    text-left
+    mb-5
+}
+
+section#contact-us form input[type=text],
+section#contact-us form input[type=email],
+section#contact-us form input[type=tel],
+section#contact-us form textarea {
+    @apply
+    block
+    w-full
+    mt-1
+    bg-white
+    rounded-lg
+    border-2
+    border-gray-300
+    p-2
+    outline-none
+}
+
+section#contact-us form input:focus,
+section#contact-us form textarea:focus {
+    @apply
+    border-green-300
+}
+
+section#contact-us form input[type=submit] {
+    @apply
+    w-full
+    mt-2
+}
+
+section#contact-us form div.name-fields {
+    @apply
+    mb-0
+}
+
+
+/******************** FOOTER SECTION ********************/
+
+footer {
+    @apply
+    bg-green-800
+}
+
+footer div.divider {
+    @apply
+    border-l-2 
+    border-gray-900
+}
+
+footer div.container {
+    background-color: #0f131a;
+    @apply
+    flex flex-col
+    px-10 py-16
+}
+
+footer div.container > div.footer-content {  
+    @apply
+    flex flex-row
+    justify-around
+}
+
+footer div.logo-copyright {
+    @apply
+    flex flex-col
+}
+
+footer div.logo-copyright > a.logo-colored {
+    @apply
+    m-0 p-0
+    mb-4
+    text-left
+    text-gray-200
+    text-xl
+}
+footer div.logo-copyright span {
+    @apply
+    text-gray-200
+    text-xl
+}
+
+footer nav > div {
+    @apply
+    flex flex-col
+}
+
+footer nav > h2,
+footer div.contact-text > h2 {
+    @apply
+    uppercase
+    font-bold
+    text-gray-300
+    mb-2
+}
+
+footer a.contact-cta,
+footer div.contact-text > p {
+    @apply
+    opacity-75
+    text-white
+    text-sm
+}
+
+footer small#copyright {  
+    @apply
+    text-white
+    text-center
+    w-full
+    pt-12
+    opacity-50
+}
+
+/******************** MEDIA QUERIES ********************/
+
+@screen lg {
+    div.flex-wrapper {
+        @apply
+        flex-row
+    }
+    
+    /******************** NAVBAR ********************/
+    nav.navbar > div.container {
+        @apply
+        px-24
+        shadow-md
+    }
+    
+    nav.navbar a.logo-colored {
+        @apply
+        mx-0
+        text-left
+        text-xl
+    }
+    
+    nav.navbar ul {
+        @apply
+        inline-block
+    }
+    
+    nav.navbar i.fa-bars,
+    nav.navbar div.whitespace {
+        @apply
+        hidden
+    }
+    
+    /******************** HERO ********************/
+    #home div.container {
+        @apply
+        h-auto
+    }
+    
+    #home div.container::before {
+        @apply
+        hidden
+    }
+    
+    #home div.hero-content {
+        @apply
+        pl-24
+        mx-0
+        my-auto
+        mr-16
+    }
+    
+    #home div.hero-content > h2 {
+        @apply
+        text-base
+        mb-4
+    }
+    #home div.hero-content > p {
+        @apply
+        text-5xl
+        text-gray-900
+        leading-none
+    }
+    
+    #home div.hero-navs > a.contact-cta {
+        @apply
+        text-lg
+    }
+    
+    #home div.img-wrapper {
+        @apply
+        block
+        w-full
+        mt-12
+    }
+    
+    /******************** SERVICES ********************/
+    section#services div.container {
+        @apply
+        py-24
+        mx-0
+        px-0
+    }
+    
+    section#services div.header {
+        @apply
+        w-full
+        mx-auto
+        text-center
+    }
+    
+    section#services div.header > h1 {
+        @apply
+        mb-2
+        text-5xl
+    }
+    
+    section#services div.header > h2 {
+        @apply
+        text-2xl
+    }
+    
+    section#services div.flex-wrapper {
+        @apply
+        mt-20
+        justify-between
+    }
+    
+    section#services div.flex-wrapper > div.img-wrapper {
+        @apply
+        block
+        h-auto
+        w-full
+    }
+    
+    section#services div.details {
+        @apply
+        pl-16
+        pr-24
+    }
+    
+    section#services div.details li h3,
+    section#services div.details li i,
+    section#services div.details li p,
+    section#services div.details li a {
+        @apply
+        text-lg
+    }
+    
+    section#services li {
+        @apply
+        mt-0 mb-12
+    }
+    
+    /******************** ABOUT US ********************/
+    section#about-us div.container {
+        @apply
+        px-24 py-20
+    }
+    
+    section#about-us div.header {
+        @apply
+        w-5/12
+        self-start
+        my-auto
+        mr-6
+    }
+    
+    section#about-us div.header > h1 {
+        font-size: 3rem;
+        
+        @apply
+        text-center
+    }
+    
+    section#about-us div.header > h2 {
+        @apply
+        hidden
+    }
+    
+    section#about-us div.about-us-content {
+        @apply
+        self-end
+        w-7/12
+    }
+    
+    section#about-us div.about-us-content > p {
+        @apply
+        leading-normal
+        text-sm
+        text-justify
+    }
+    
+    /******************** CONTACT US ********************/
+    section#contact-us div.container {
+        height: 72rem;
+        @apply
+        p-24
+    }
+    
+    section#contact-us div.contact-text {
+        @apply
+        mt-12
+    }
+    
+    section#contact-us div.container > div.flex-wrapper {
+        @apply
+        justify-around
+    }
+    
+    section#contact-us div.container > div.header > h1 {
+        @apply
+        text-6xl
+    }
+    
+    section#contact-us div.contact-text > h3 {
+        @apply
+        mt-10
+        text-2xl
+    }
+    
+    section#contact-us div.contact-text p {
+        @apply
+        text-lg
+    }
+    
+    section#contact-us div.contact-text p.subtext {
+        @apply
+        text-sm
+    }
+    
+    section#contact-us div.leave-message {
+        @apply
+        w-5/12
+    }
+    
+    section#contact-us div.leave-message div.name-fields {
+        @apply
+        justify-between
+        mb-0
+    }
+    
+    section#contact-us div.leave-message div.name-fields > div:first-child {
+        @apply
+        mr-6
+    }
+    
+    section#contact-us form input[type=submit] {
+        @apply
+        text-lg
+    }
+    
+    /******************** FOOTER ********************/
+    footer div.container > div.footer-content { 
+        @apply
+        flex flex-row
+        justify-around
+    }
+}
+
+
+@screen xl {
+    #home div.hero-content > p {
+        @apply
+        text-6xl
+    }
+    
+    section#services div.flex-wrapper > div.img-wrapper {
+        @apply
+        w-8/12
+    }
+    
+    section#services div.header > h1 {
+        @apply
+        text-6xl
+    }
+    
+    section#services div.details li h3,
+    section#services div.details li i,
+    section#services div.details li p,
+    section#services div.details li a {
+        @apply
+        text-xl
+    }
+    
+    section#about-us div.header {
+        @apply
+        w-full
+        self-start
+        my-auto
+        mr-6
+    }
+    
+    section#about-us div.header > h1 {
+        font-size: 4rem;
+        
+        @apply
+        text-center
+    }
+    
+    section#about-us div.about-us-content {
+        @apply
+        w-full
+    }
+    
+    section#about-us div.about-us-content > p {
+        @apply
+        text-base
+    }
+}
