@@ -569,6 +569,10 @@ section#contact-us form input[type=submit] {
     w-full
     mt-2
 }
+section#contact-us form input[type=submit]:disabled {
+    @apply
+    bg-gray-500
+}
 
 section#contact-us form div.name-fields {
     @apply
