@@ -39,6 +39,8 @@ doc.querySelectorAll('#side-nav > *').forEach(el => {
 doc.getElementById('message-form').addEventListener('submit', function (event) {
   event.preventDefault()
 
+  doc.getElementById('msg-submit').disabled = true
+
   emailjs.sendForm(
     config.emailjs.service,
     config.emailjs.template,
@@ -50,5 +52,7 @@ doc.getElementById('message-form').addEventListener('submit', function (event) {
     } else {
       alert("Your message can't be sent right now. You can send us an email or text instead.")
     }
+
+    doc.getElementById('msg-submit').disabled = false
   })
 })
