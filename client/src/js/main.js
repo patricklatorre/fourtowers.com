@@ -1,12 +1,14 @@
 import emailjs from 'emailjs-com'
 import config from './config.js'
 
+let doc = document
+
 function openNav() {
-  document.getElementById('side-nav').style.width = '100%'
+  doc.getElementById('side-nav').style.width = '100%'
 }
 
 function closeNav() {
-  document.getElementById('side-nav').style.width = '0'
+  doc.getElementById('side-nav').style.width = '0'
 }
 
 /**
@@ -20,13 +22,13 @@ emailjs.init(config.emailjs.userId)
  * Open sidenav on clicking
  * hamburger
  */
-document.getElementById('hamburger-icon').addEventListener('click', openNav)
+doc.getElementById('hamburger-icon').addEventListener('click', openNav)
 
 /**
  * Close nav on clicking any
  * CTA inside sidenav
  */
-document.querySelectorAll('#side-nav > *').forEach(el => {
+doc.querySelectorAll('#side-nav > *').forEach(el => {
   el.addEventListener('click', closeNav)
 })
 
@@ -34,7 +36,7 @@ document.querySelectorAll('#side-nav > *').forEach(el => {
  * Send form as email using
  * emailjs service
  */
-document.getElementById('message-form').addEventListener('submit', function (event) {
+doc.getElementById('message-form').addEventListener('submit', function (event) {
   event.preventDefault()
 
   emailjs.sendForm(
@@ -44,7 +46,7 @@ document.getElementById('message-form').addEventListener('submit', function (eve
   ).then((response) => {
     if (response.status === 200) {
       alert('Your message has been sent! Thank you for contacting us.')
-      document.getElementById('message-form').reset()
+      doc.getElementById('message-form').reset()
     } else {
       alert("Your message can't be sent right now. You can send us an email or text instead.")
     }
